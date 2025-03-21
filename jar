@@ -1,0 +1,31 @@
+CREATE DATABASE todo_list;
+
+USE todo_list;
+
+
+
+CREATE TABLE tasks (
+    id INT PRIMARY KEY,
+    description VARCHAR(255) NOT NULL,
+    due_date DATE,
+    priority INT DEFAULT 1,
+    category VARCHAR(50),
+    status VARCHAR(10) DEFAULT 'Pending'
+);
+
+
+
+
+INSERT INTO tasks (id, description, due_date, priority, category, status) VALUES
+(1, 'Complete project proposal', '2024-04-20', 2, 'Work', 'Pending'),
+(2, 'Blast Technical Hub', '2024-04-15', 1, 'Personal', 'Pending'),
+(3, 'Call Mythri', '2024-04-12', 3, 'Personal', 'Pending'),
+(4, 'Submit report', '2024-04-18', 2, 'Work', 'Pending'),
+(5, 'Pay bills', '2024-04-25', 1, 'Personal', 'Pending'),
+(6, 'Finish coding assignment', '2024-04-22', 3, 'Study', 'Pending'),
+(7, 'Schedule dentist appointment', '2024-04-17', 2, 'Personal', 'Pending'),
+(8, 'Prepare presentation slides', '2024-04-19', 3, 'Work', 'Pending'),
+(9, 'Read book chapter', '2024-04-14', 1, 'Study', 'Pending'),
+(10, 'Clean the house', '2024-04-23', 2, 'Personal', 'Pending');
+
+SELECT * FROM tasks;
